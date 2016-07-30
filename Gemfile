@@ -29,6 +29,8 @@ gem 'figaro'
 
 gem 'pry'
 
+gem 'devise'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
