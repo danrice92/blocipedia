@@ -12,8 +12,29 @@
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", welcome_about_path %></li>
-    </ul>
 
+      <div class="pull-right-user-info">
+        <% if user_signed_in? %>
+          <div class="pull-right">
+            <!--Fixes a duplicate border-bottom line that occurred by calling the nav nav-tabs class twice-->
+            <ul class="nav nav-tabs", style="border-bottom:0px;">
+              <li class="username">Signed in as: <strong><%= current_user.email %></strong></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+            </ul>
+          </div>
+        <% else %>
+          <div class="pull-right">
+            <!--Again, removes the border-bottom duplication-->
+            <ul class="nav nav-tabs", style="border-bottom:0px;">
+              <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
+            </ul>
+          </div>
+          
+        <% end %>
+      </div>
+    </ul>
     <%= yield %>
   </div>
 
