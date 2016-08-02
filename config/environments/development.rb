@@ -52,4 +52,6 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :ssl =>false
   }
+  
+  config.web_console.development_only = false
 end
