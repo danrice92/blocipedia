@@ -31,6 +31,8 @@ gem 'pry'
 
 gem 'devise'
 
+gem 'pundit'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
