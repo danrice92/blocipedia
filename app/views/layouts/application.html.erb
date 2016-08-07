@@ -21,6 +21,11 @@
             <ul class="nav nav-tabs", style="border-bottom:0px;">
               <li class="username">Signed in as: <strong><%= current_user.email %></strong></li>
               <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+              <% if current_user.standard? %>
+                <li><%= link_to 'Upgrade to Premium', new_charge_path, :class => 'navbar-link' %></li>
+              <% elsif current_user.premium? %>
+                <li><%= link_to 'Downgrade Your Account', new_downgrade_path, :class => 'navbar-link' %></li>
+              <% end %>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
             </ul>
           </div>
