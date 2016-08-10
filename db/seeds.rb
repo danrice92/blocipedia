@@ -32,7 +32,7 @@ end
 
 users = User.all
 
-100.times do
+10.times do
     Wiki.create!(
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph,
