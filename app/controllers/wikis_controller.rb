@@ -5,7 +5,7 @@ class WikisController < ApplicationController
 
   def show
     @wiki = Wiki.find(params[:id])
-    unless (@wiki.private == false) || current_user.premium? || current_user.admin?
+    unless (@wiki.private == false) || (@wiki.private == nil) || current_user.premium? || current_user.admin?
         flash[:alert] = "You must be a premium user to view private topics."
         if current_user
           redirect_to new_charge_path
