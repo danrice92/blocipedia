@@ -19,7 +19,7 @@
                     <%= f.label :body %>
                     <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
                 </div>
-                <% if user_is_authorized_to_create? %>
+                <% if user_is_authorized_to_delete? %>
                     <div class="form-group">
                         <%= f.label :private, class: 'checkbox' do %>
                             <%= f.check_box :private %> Private wiki
