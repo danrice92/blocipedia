@@ -3,6 +3,13 @@
 <div class="row">
     <div class="col-md-8">
         <p><%= markdown(@wiki.body) %></p>
+        <p>Created by <%= @wiki.user.email %></p>
+        <p>Collaborators:
+            <% unless @wiki.collaborators.empty? %>
+                <% @wiki.collaborators.each do |collaborator| %>
+                    <p><%= collaborator.email %></p>
+                <% end %>
+            <% end %></p>
     </div>
     <div class="col-md-4">
         <% if user_is_authorized_to_update? %>

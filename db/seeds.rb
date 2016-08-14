@@ -1,34 +1,38 @@
 require 'random_data'
 
-5.times do
-    User.create!(
+5.times do 
+    user= User.new(
         email: RandomData.random_email,
-        password: "Arandompassword123",
-        standard: true,
-        premium: false,
-        admin: false
+        password: "password",
+        role: "standard"
         )
+    user.skip_confirmation!
+    user.save!
 end
 
-3.times do
-    User.create!(
-        email: RandomData.random_email,
-        password: "Arandompremiumpassword123",
-        standard: false,
-        premium: true,
-        admin: false
-        )
-end
+standard_user = User.new(
+    email: "email@email.com",
+    password: "password",
+    role: "standard"
+    )
+standard_user.skip_confirmation!
+standard_user.save!
 
-2.times do
-    User.create!(
-        email: RandomData.random_email,
-        password: "Arandomadminemail123",
-        standard: false,
-        premium: false,
-        admin: true
-        )
-end
+premium_user = User.new(
+    email: "daniel.k.rice@gmail.com",
+    password: "helloworld",
+    role: "premium"
+    )
+premium_user.skip_confirmation!
+premium_user.save!
+
+admin_user = User.new(
+    email: "dan.rice.92@outlook.com",
+    password: "helloworld",
+    role: "admin"
+    )
+admin_user.skip_confirmation!
+admin_user.save!
 
 users = User.all
 
@@ -36,7 +40,8 @@ users = User.all
     Wiki.create!(
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph,
-        private: false
+        private: false,
+        user: User.last
         )
 end
 

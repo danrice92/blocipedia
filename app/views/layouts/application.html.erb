@@ -17,7 +17,6 @@
       <div class="pull-right-user-info">
         <% if user_signed_in? %>
           <div class="pull-right">
-            <!--Fixes a duplicate border-bottom line that occurred by calling the nav nav-tabs class twice-->
             <ul class="nav nav-tabs", style="border-bottom:0px;">
               <li class="username">Signed in as: <strong><%= current_user.email %></strong></li>
               <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
