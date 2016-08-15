@@ -1,6 +1,6 @@
 ## Blocipedia: a wiki collaboration tool
 
-  ![Blocipeida pic](https://github.com/danrice92/blocipedia/blob/master/lib/assets/blocipedia.png)
+  ![Blocipedia pic](https://github.com/danrice92/blocipedia/blob/master/lib/assets/blocipedia.png)
   
   Blocipedia is the first project I completed after the Foundation work at Bloc.
   
