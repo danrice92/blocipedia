@@ -1,6 +1,6 @@
 ## Blocipedia: a wiki collaboration tool
 
-  ![Blocipedia pic]({{ site.baseurl }}/assets/blocipedia.png)
+  ![Blocipedia pic]({{ site.baseurl }}/lib/assets/blocipedia.png)
   
   Blocipedia is the first project I completed after the Foundation work at Bloc.
   
