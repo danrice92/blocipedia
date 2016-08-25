@@ -7,7 +7,7 @@ class WikiPolicy < ApplicationPolicy
     end
     
     def create?
-        user.admin? || user.premium?
+        user.admin? || user.premium? || user.standard?
     end
     
     def new?
