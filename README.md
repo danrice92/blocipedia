@@ -31,6 +31,6 @@
 
   Pretty cool, huh? I'm pretty happy with it for a first outing, myself.
   
-  The app is now live on [Heroku!](http://dan-rice-blocipedia.herokuapp.com), and you can read more about it at my [blog](http://danrice.me).
+  The app is now live on [Heroku](http://dan-rice-blocipedia.herokuapp.com), and you can read more about it at my [blog](http://danrice.me).
   
   Made with my mentor at [Bloc](http://bloc.io).
