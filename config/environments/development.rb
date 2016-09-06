@@ -39,19 +39,5 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   
-  config.action_mailer.default_url_options = { :host => 'https://blocipedia-danielkrice.c9users.io' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.smtp_settings = {
-    :address              => 'smtp.mailgun.org',
-    :port                 => 2525,
-    :domain               => ENV['MAILGUN_URL'],
-    :user_name            => ENV['MAILGUN_USERNAME'],
-    :password             => ENV['MAILGUN_PASSWORD'],
-    :authentication => :plain,
-    :enable_starttls_auto => true,
-    :ssl =>false
-  }
-  
   config.web_console.development_only = false
 end
