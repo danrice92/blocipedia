@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813210425) do
+ActiveRecord::Schema.define(version: 0) do
 
   create_table "collaborators", force: :cascade do |t|
     t.integer  "wiki_id"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20160813210425) do
     t.datetime "updated_at", null: false
     t.string   "email"
   end
-
-  add_index "collaborators", ["wiki_id"], name: "index_collaborators_on_wiki_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
